@@ -1,16 +1,16 @@
 # Sistema de Biblioteca — Java JPA/DAO
-**Atividade 1ª Avaliação (3 pts) — Mapeamento Objeto-Relacional**
+
 
 ---
 
-## 👥 Membros
+## Membros
 | Nome | Matrícula |
 |------|-----------|
-| _(preencher)_ | _(preencher)_ |
+| _Juan Pablo Mescouto da Silva_ | _202407905465_ |
 
 ---
 
-## 📐 Diagrama de Classes (Modelo Conceitual)
+## Diagrama de Classes (Modelo Conceitual)
 
 ```
 Emprestimo                    Aluno
@@ -29,7 +29,7 @@ Emprestimo                    Aluno
 
 ---
 
-## 📦 Estrutura de Pacotes
+## Estrutura de Pacotes
 
 ```
 src/
@@ -53,7 +53,7 @@ pom.xml                             → Dependências Maven
 
 ---
 
-## 🗄️ Mapeamento SQL (Questão 1)
+## Mapeamento SQL (Questão 1)
 
 Três tabelas principais + uma tabela de associação N:M:
 
@@ -66,7 +66,7 @@ Três tabelas principais + uma tabela de associação N:M:
 
 ---
 
-## 🔗 Mapeamento JPA (Questão 2)
+## Mapeamento JPA (Questão 2)
 
 | Relacionamento | Tipo JPA | Descrição |
 |----------------|----------|-----------|
@@ -76,7 +76,7 @@ Três tabelas principais + uma tabela de associação N:M:
 
 ---
 
-## 📋 EmprestimoDAO (Questão 3)
+## EmprestimoDAO (Questão 3)
 
 Métodos implementados:
 
@@ -91,41 +91,14 @@ Métodos implementados:
 
 ---
 
-## 🧪 Testes (Questão 4)
+## Testes (Questão 4)
 
 `EmprestimoDAOTest` cobre:
-- ✅ Incluir empréstimo com publicações
-- ✅ Alterar data de devolução
-- ✅ Deletar empréstimo
-- ✅ Consultar por Id (existente e inexistente)
-- ✅ Consultar todos
-- ✅ Consultar por nome do aluno (parcial, case-insensitive)
+- Incluir empréstimo com publicações
+- Alterar data de devolução
+- Deletar empréstimo
+- Consultar por Id (existente e inexistente)
+- Consultar todos
+- Consultar por nome do aluno (parcial, case-insensitive)
 
 ---
-
-## ▶️ Como executar
-
-### Pré-requisitos
-- Java 17+
-- Maven 3.8+
-
-### Comandos
-
-```bash
-# Compilar
-mvn compile
-
-# Executar os testes
-mvn exec:java -Dexec.mainClass="biblioteca.EmprestimoDAOTest"
-
-# Ou simplesmente:
-mvn exec:java
-```
-
----
-
-## 📝 Observações
-
-- O **id** de cada entidade é definido com `@GeneratedValue(strategy = IDENTITY)` (auto-incremento).
-- O banco H2 em memória é usado nos testes; para produção, basta trocar as propriedades no `persistence.xml`.
-- As setas do diagrama indicam o **sentido de navegação**: `Emprestimo` possui referência ao `Aluno` e às `Publicacoes`.
